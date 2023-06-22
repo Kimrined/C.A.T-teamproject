@@ -1,0 +1,4 @@
+User - Board 관계
+1. User가 Board를 작성한다.                     - 1 : n
+2. User가 Board에 좋아요를 행한다.           - n : m
+3. User가 Board에 댓글을 단다.                 - n : m

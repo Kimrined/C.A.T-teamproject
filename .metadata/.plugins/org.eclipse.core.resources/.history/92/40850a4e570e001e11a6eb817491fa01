@@ -1,0 +1,5 @@
+package com.CAT.board.config;
+
+public class WebSecurityConfig {
+
+}

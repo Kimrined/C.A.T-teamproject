@@ -1,0 +1,22 @@
+package com.CAT.board.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.CAT.board.dto.PatchUserResponseDto;
+import com.CAT.board.dto.ResponseDto;
+import com.CAT.board.entity.UserEntity;
+import com.CAT.board.repository.UserRepository;
+
+@Service
+public class UserService {
+
+	@Autowired UserRepository userRepository;
+	
+	public ResponseDto<PatchUserResponseDto> patchUser(String userEmail) {
+		UserEntity userEntity = null;
+		try {
+			
+		} catch
+	}
+}

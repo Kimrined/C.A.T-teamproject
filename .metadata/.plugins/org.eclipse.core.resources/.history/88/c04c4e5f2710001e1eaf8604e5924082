@@ -1,0 +1,24 @@
+package com.CAT.board.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor(staticName="set")
+
+public class ResponseDto<D> {
+	@SuppressWarnings("unused")
+	private boolean result;
+	@SuppressWarnings("unused")
+	private String message;
+	@SuppressWarnings("unused")
+	private D data;
+
+	public static <D> ResponseDto<D> setSuccess(String message, D data){
+		return ResponseDto.setSuccess(message, data);
+	}
+
+	public static <D> ResponseDto<D> setFailed(boolean b, String message){
+		return ResponseDto.setFailed(false, message);
+	}
+}

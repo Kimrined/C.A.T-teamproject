@@ -1,0 +1,57 @@
+package com.CAT.board.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.CAT.board.dto.SignUpDto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.Builder;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity(name="User")
+@Table(name="User")
+public class UserEntity {
+	@Id
+	private String userEmail;
+	private String userPassword;
+	private String userNickname;
+	private String userPhoneNumber;
+	private String userAddress;
+	private String userProfile;
+	
+	public UserEntity(SignUpDto dto) {
+		this.userEmail = dto.getUserEmail();
+		this.userPassword = dto.getUserPassword();
+		this.userNickname = dto.getuserNickname();
+		this.userPhoneNumber = dto.getuserPhoneNumber();
+		this.userAddress = dto.getuserAddress() + " " + dto.getUserAddressDetial();
+		this.userProfile = dto.getuserProfile();
+	}
+
+	public void setUserPassword(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public String getUserPassword() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void setUserProfile(String userProfile2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setUserNickname(String userNickname2) {
+		// TODO Auto-generated method stub
+		
+	}
+}
